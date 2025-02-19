@@ -1,8 +1,21 @@
+import Carrousel from "@/ui/components/carrousel/carrousel";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)] bg-background text-textDarkBlue-100">
-      <h1 className="text-3xl font-semibold text-buttonYellow-500">Tourism home</h1>
+    <div className="bg-background text-textDarkBlue-100 flex flex-col items-center pt-4">
+
+      <div className="w-full px-4">
+        <Carrousel />
+      </div>
+      
+
+      {/* Conteúdo extra abaixo do carrossel */}
+      <div className="mt-10 p-6 text-center">
+        <h2 className="text-2xl font-semibold">Explore Mais</h2>
+        <p className="text-lg text-gray-600 mt-2">
+          Descubra destinos incríveis ao redor do mundo!
+        </p>
+      </div>
     </div>
   );
 }
