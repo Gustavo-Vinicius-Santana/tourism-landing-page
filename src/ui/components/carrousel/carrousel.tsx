@@ -5,8 +5,10 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-import { Autoplay, Navigation, Pagination } from 'swiper/modules';
+import { Autoplay } from 'swiper/modules';
 import Image from 'next/image';
+
+import Link from "next/link";
 
 export default function Carrousel() {
     const slides = [
@@ -55,6 +57,13 @@ export default function Carrousel() {
                         <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center p-6 bg-black bg-opacity-40">
                             <h3 className="text-3xl font-bold">{title}</h3>
                             <p className="mt-2 text-lg">{description}</p>
+
+                            <Link href="/pacotes">
+                                <button className="mt-4 px-6 py-3 bg-blue-500 text-white text-base font-medium rounded-lg shadow-md hover:bg-blue-600 active:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 transition-all">
+                                        Faça sua reserva
+                                </button>
+                            </Link>
+
                         </div>
                     </div>
                 </SwiperSlide>
