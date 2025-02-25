@@ -1,12 +1,9 @@
 "use client";
 
-import React, { useRef } from "react";
+import React from "react";
 
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/pagination';
-import { Pagination, Navigation, Scrollbar, A11y, Autoplay, EffectFade, EffectCoverflow } from 'swiper/modules';
-import CardPromo from '@/ui/components/cardPromo/cardPromo';
+import SwiperCards from "@/ui/components/swiperCards/swiperCards";
+import SwiperCardsEmphasis from "@/ui/components/swiperCardsEmphasis/swiperCardsEmphasis";
 
 export default function Pacotes() {
 
@@ -130,172 +127,37 @@ const praiasSul = [
         }
     ];
 
-    const swiperRef = useRef<any>(null);
-
     return (
       <div className="bg-gradient-to-b from-blue-50 to-blue-100 text-textDarkBlue-100 flex flex-col items-center pt-6">
         <h1 className="text-3xl font-semibold text-buttonYellow-500">Nossos pacotes</h1>
 
-        <div className="w-full flex flex-col items-center p-4">
-      <div className="w-full flex flex-col items-center bg-white shadow-lg rounded-lg p-6">
-        <h2 className="text-2xl font-semibold mb-4">Pacotes destaque</h2>
-        <Swiper
-          onSwiper={(swiper) => {
-            swiperRef.current = swiper;
-          }}
-          effect="coverflow"
-          initialSlide={1}
-          grabCursor={true}
-          centeredSlides={true}
-          coverflowEffect={{
-            rotate: 0,
-            stretch: 0,
-            depth: 150,
-            modifier: 1,
-            slideShadows: false,
-          }}
-          pagination={{ clickable: true }}
-          modules={[EffectCoverflow, Pagination]}
-          className="w-full"
-          breakpoints={{
-            640: {
-              slidesPerView: 1,
-            },
-            768: {
-              slidesPerView: 2,
-            },
-            1024: {
-              slidesPerView: 3,
-            },
-          }}
-        >
-          {destaque.map((pacote, index) => (
-            <SwiperSlide
-              key={index}
-              className="cursor-pointer"
-              onClick={() => {
-                if (swiperRef.current && swiperRef.current.slideTo) {
-                  swiperRef.current.slideTo(index);
-                }
-              }}
-            >
-              <div className="flex justify-center p-4">
-                <CardPromo
-                  titulo={pacote.titulo}
-                  descricao={pacote.descricao}
-                  preco={pacote.preco}
-                  imagem={pacote.imagem}
-                />
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      </div>
-    </div>
+          <div className="w-full flex flex-col items-center p-4">
+            <div className="w-full flex flex-col items-center bg-white shadow-lg rounded-lg p-6">
+              <h2 className="text-2xl font-semibold mb-4">Pacotes destaque</h2>
+              <SwiperCardsEmphasis passeios={destaque} />
+            </div>
+          </div>
 
           <div className="w-full flex flex-col items-center p-4">
-              <div className="w-full flex flex-col items-center  bg-white shadow-lg rounded-lg p-6">
-                  <h2 className="text-2xl font-semibold mb-4">Pacotes Praias do Nordeste</h2>
-                  <Swiper
-                      slidesPerView={1}
-                      spaceBetween={20}
-                      pagination={{ clickable: true }}
-                      modules={[Pagination]}
-                      className="w-full"
-
-                      breakpoints={{
-                        640: {
-                          slidesPerView: 1,
-                        },
-                        768: {
-                          slidesPerView: 2,
-                        },
-                        1024: {
-                          slidesPerView: 3,
-                        },
-                      }}
-                  >
-                      {praiasNordeste.map((pacote, index) => (
-                          <SwiperSlide key={index}>
-                            <div className='flex justify-center p-4'>
-                              <CardPromo titulo={pacote.titulo} descricao={pacote.descricao} preco={pacote.preco} imagem={pacote.imagem} />
-                            </div>
-                              
-                          </SwiperSlide>
-                      ))}
-                  </Swiper>
-              </div>
+            <div className="w-full flex flex-col items-center  bg-white shadow-lg rounded-lg p-6">
+                <h2 className="text-2xl font-semibold mb-4">Pacotes Praias do Nordeste</h2>
+                <SwiperCards passeios={praiasNordeste} />
+            </div>
           </div>
 
           <div className="w-full flex flex-col items-center p-4 mt-8">
               <div className="w-full flex flex-col items-center  bg-white shadow-lg rounded-lg p-6">
                   <h2 className="text-2xl font-semibold mb-4">Pacotes Praias do Nordeste</h2>
-                  <Swiper
-                      slidesPerView={1}
-                      spaceBetween={20}
-                      pagination={{ clickable: true }}
-                      modules={[Pagination]}
-                      className="w-full"
-
-                      breakpoints={{
-                        640: {
-                          slidesPerView: 1,
-                        },
-                        768: {
-                          slidesPerView: 2,
-                        },
-                        1024: {
-                          slidesPerView: 3,
-                        },
-                      }}
-                  >
-                      {praiasSudeste.map((pacote, index) => (
-                          <SwiperSlide key={index}>
-                            <div className='flex justify-center p-4'>
-                              <CardPromo titulo={pacote.titulo} descricao={pacote.descricao} preco={pacote.preco} imagem={pacote.imagem} />
-                            </div>
-                              
-                          </SwiperSlide>
-                      ))}
-                  </Swiper>
+                  <SwiperCards passeios={praiasNordeste} />
               </div>
           </div>
 
           <div className="w-full flex flex-col items-center p-4 mt-8">
-              <div className="w-full flex flex-col items-center  bg-white shadow-lg rounded-lg p-6">
-                  <h2 className="text-2xl font-semibold mb-4">Pacotes Praias do sul</h2>
-                  <Swiper
-                      slidesPerView={1}
-                      spaceBetween={20}
-                      pagination={{ clickable: true }}
-                      modules={[Pagination]}
-                      className="w-full"
-
-                      breakpoints={{
-                        640: {
-                          slidesPerView: 1,
-                        },
-                        768: {
-                          slidesPerView: 2,
-                        },
-                        1024: {
-                          slidesPerView: 3,
-                        },
-                      }}
-                  >
-                      {praiasSul.map((pacote, index) => (
-                          <SwiperSlide key={index}>
-                            <div className='flex justify-center p-4'>
-                              <CardPromo titulo={pacote.titulo} descricao={pacote.descricao} preco={pacote.preco} imagem={pacote.imagem} />
-                            </div>
-                              
-                          </SwiperSlide>
-                      ))}
-                  </Swiper>
-              </div>
+            <div className="w-full flex flex-col items-center  bg-white shadow-lg rounded-lg p-6">
+                <h2 className="text-2xl font-semibold mb-4">Pacotes Praias do sul</h2>
+                <SwiperCards passeios={praiasSudeste} />
+            </div>
           </div>
-
-
       </div>
     );
   }
