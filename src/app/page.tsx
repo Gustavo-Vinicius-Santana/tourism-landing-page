@@ -1,5 +1,6 @@
 import Carrousel from "@/ui/components/carrousel/carrousel";
 import SwiperCardPromo from "@/ui/components/swiperCardsPromo/swiperCardPromo";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -48,6 +49,11 @@ export default function Home() {
 
           <div className="w-full mt-6">
             <SwiperCardPromo />
+            <Link href="/pacotes">
+              <button className="mt-4 px-6 py-3 bg-blue-500 text-white text-base font-medium rounded-lg shadow-md hover:bg-blue-600 active:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 transition-all">
+                Ver mais
+              </button>
+            </Link>
           </div>
         </div>
       </div>
