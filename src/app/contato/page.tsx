@@ -3,7 +3,7 @@ import { FaWhatsapp, FaInstagram, FaPhone, FaEnvelope } from "react-icons/fa";
 export default function Contato() {
 
     return (
-        <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-6">
+        <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-b from-blue-50 to-blue-100 p-6">
             <div className="bg-white shadow-lg rounded-2xl p-12 w-full max-w-4xl text-center">
                 <h1 className="text-3xl font-bold text-blue-800 mb-6">Entre em Contato</h1>
                 <p className="text-gray-600 mb-6 text-lg">

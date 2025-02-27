@@ -38,16 +38,15 @@ export default function Carrousel() {
         <>
             <Swiper
                 modules={[Autoplay]}
-                spaceBetween={30}
                 centeredSlides={true}
                 autoplay={{ delay: 3500, disableOnInteraction: false }}
                 loop={true}
                 pagination={{ clickable: true }}
-                className="w-full max-w-5xl"
+                className="w-full"
             >
                 {slides.map(({ img, title, description }, index) => (
                 <SwiperSlide key={index}>
-                    <div className="relative w-full h-[500px] rounded-lg overflow-hidden">
+                    <div className="relative w-full h-[500px] overflow-hidden">
                         <Image
                             src={`/${img}`}
                             alt={`Imagem ${index + 1}`}
@@ -60,7 +59,7 @@ export default function Carrousel() {
 
                             <Link href="/pacotes">
                                 <button className="mt-4 px-6 py-3 bg-blue-500 text-white text-base font-medium rounded-lg shadow-md hover:bg-blue-600 active:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 transition-all">
-                                        Faça sua reserva
+                                        Conheça nossos passeios
                                 </button>
                             </Link>
 
