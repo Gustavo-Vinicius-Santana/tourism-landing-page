@@ -130,7 +130,7 @@ const praiasPernambuco = [
     return (
         <div className="bg-gradient-to-b from-blue-50 to-blue-100 text-textDarkBlue-100 flex flex-col items-center pt-6">
         
-        <h1 className="text-4xl font-extrabold text-blue-800 mb-8 text-center">
+        <h1 className="text-3xl font-extrabold text-blue-800 mb-8 text-center">
             Pacotes de Viagem - Praias do Nordeste
         </h1>
 
