@@ -5,22 +5,26 @@ import Link from "next/link";
 export default function Home() {
   return (
     <div className="bg-gradient-to-b from-blue-50 to-blue-100 text-textDarkBlue-100 flex flex-col items-center">
-
-      {/* Carrousel principal*/}
-      <div className="w-full">
+      
+      {/* Carrousel principal */}
+      <section className="w-full" aria-labelledby="carrousel-title">
+        <h1 id="carrousel-title" className="sr-only">
+          Turismo no Nordeste: Descubra os melhores destinos
+        </h1>
         <Carrousel />
-      </div>
+      </section>
 
-      {/* Container texto e video*/}
-      <div className="w-full flex flex-col items-center p-4">         
-        <div className="flex flex-col md:flex-row items-center justify-between gap-12 p-8 max-w-5xl bg-white shadow-lg rounded-xl mt-12">
+      {/* Container texto e vídeo */}
+      <section className="w-full flex flex-col items-center p-4">
+        <article className="flex flex-col md:flex-row items-center justify-between gap-12 p-8 max-w-5xl bg-white shadow-lg rounded-xl mt-12">
+          
           {/* Texto */}
           <div className="w-full md:w-1/2 text-center md:text-left">
             <h2 className="text-3xl font-extrabold text-blue-800">
-              Venha conhecer as praias do Nordeste
+              Explore as praias paradisíacas do Nordeste
             </h2>
             <p className="mt-4 text-gray-600 leading-relaxed">
-              O Nordeste brasileiro é famoso por suas praias paradisíacas, com águas cristalinas, areia branca e coqueirais que formam cenários inesquecíveis. Lugares como Jericoacoara, Porto de Galinhas e Morro de São Paulo são destinos perfeitos para quem busca tranquilidade e belezas naturais únicas.
+              O Nordeste brasileiro é um destino turístico repleto de praias deslumbrantes, águas cristalinas e coqueirais que formam paisagens inesquecíveis. Descubra destinos incríveis como João Pessoa, Natal, Recife e Campina Grande.
             </p>
           </div>
 
@@ -29,34 +33,37 @@ export default function Home() {
             <iframe
               className="w-full h-64 md:h-80 rounded-lg shadow-md transition-transform transform hover:scale-105"
               src="https://www.youtube.com/embed/T90rYD4TPYU?autoplay=1&mute=1&loop=1&playlist=T90rYD4TPYU"
-              title="Praias do Nordeste"
+              title="Conheça as melhores praias do Nordeste"
               allow="autoplay"
               allowFullScreen
             ></iframe>
           </div>
-        </div>
-      </div>
+        </article>
+      </section>
 
-      {/* Container vendas de produtos*/}
-      <div className="flex flex-col items-center p-4 w-full mx-4">
-        <div className="w-full mt-12 mb-12 pt-12 pb-12 px-8 text-center max-w-5xl bg-white shadow-lg rounded-xl">
+      {/* Container de passeios e pacotes */}
+      <section className="flex flex-col items-center p-4 w-full mx-4">
+        <article className="w-full mt-12 mb-12 pt-12 pb-12 px-8 text-center max-w-5xl bg-white shadow-lg rounded-xl">
           <h2 className="text-blue-800 text-3xl font-semibold">
-            Conheça nossos principais passeios
+            Passeios imperdíveis em João Pessoa, Natal e Recife
           </h2>
           <p className="mt-4 text-gray-600 leading-relaxed">
-            Aproveite ofertas exclusivas e descubra experiências inesquecíveis para sua próxima aventura.
+            Aproveite ofertas exclusivas e descubra experiências inesquecíveis com nossos pacotes de turismo.
           </p>
 
           <div className="w-full mt-6">
             <SwiperCardPromo />
             <Link href="/pacotes">
-              <button className="mt-4 px-6 py-3 bg-blue-500 text-white text-base font-medium rounded-lg shadow-md hover:bg-blue-600 active:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 transition-all">
+              <button
+                className="mt-4 px-6 py-3 bg-blue-500 text-white text-base font-medium rounded-lg shadow-md hover:bg-blue-600 active:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 transition-all"
+                title="Veja todos os pacotes de turismo disponíveis"
+              >
                 Ver mais
               </button>
             </Link>
           </div>
-        </div>
-      </div>
+        </article>
+      </section>
 
     </div>
   );

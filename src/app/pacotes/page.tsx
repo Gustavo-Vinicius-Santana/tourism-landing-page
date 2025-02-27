@@ -128,35 +128,56 @@ const praiasPernambuco = [
 ];
 
     return (
-      <div className="bg-gradient-to-b from-blue-50 to-blue-100 text-textDarkBlue-100 flex flex-col items-center pt-6">
+        <div className="bg-gradient-to-b from-blue-50 to-blue-100 text-textDarkBlue-100 flex flex-col items-center pt-6">
+        
+        <h1 className="text-4xl font-extrabold text-blue-800 mb-8 text-center">
+            Pacotes de Viagem - Praias do Nordeste
+        </h1>
 
-          <div className="w-full flex flex-col items-center p-4">
+        {/* Pacotes Destaque */}
+        <section className="w-full flex flex-col items-center p-4">
             <div className="w-full flex flex-col items-center bg-white shadow-lg rounded-lg p-6">
-              <h2 className="text-3xl font-extrabold text-blue-800">Pacotes destaque</h2>
-              <SwiperCardsEmphasis passeios={destaque} />
+            <h2 className="text-3xl font-extrabold text-blue-800">Pacotes Destaque</h2>
+            <p className="text-gray-600 text-lg text-center mt-2">
+                Os destinos mais procurados do Nordeste, selecionados especialmente para você.
+            </p>
+            <SwiperCardsEmphasis passeios={destaque} />
             </div>
-          </div>
+        </section>
 
-          <div className="w-full flex flex-col items-center p-4">
-            <div className="w-full flex flex-col items-center  bg-white shadow-lg rounded-lg p-6">
-                <h2 className="text-2xl font-semibold mb-4 text-blue-800">Pacotes Praias da Paraiba</h2>
-                <SwiperCards passeios={praiasParaiba} />
+        {/* Pacotes - Praias da Paraíba */}
+        <section className="w-full flex flex-col items-center p-4">
+            <div className="w-full flex flex-col items-center bg-white shadow-lg rounded-lg p-6">
+            <h2 className="text-2xl font-semibold text-blue-800">Pacotes - Praias da Paraíba</h2>
+            <p className="text-gray-600 text-lg text-center mt-2">
+                Explore as belezas de João Pessoa e descubra as praias mais paradisíacas da Paraíba.
+            </p>
+            <SwiperCards passeios={praiasParaiba} />
             </div>
-          </div>
+        </section>
 
-          <div className="w-full flex flex-col items-center p-4 mt-8">
-              <div className="w-full flex flex-col items-center  bg-white shadow-lg rounded-lg p-6">
-                  <h2 className="text-2xl font-semibold mb-4 text-blue-800">Pacotes Praias do Rio grande do norte</h2>
-                  <SwiperCards passeios={praiasRN} />
-              </div>
-          </div>
-
-          <div className="w-full flex flex-col items-center p-4 mt-8">
-            <div className="w-full flex flex-col items-center  bg-white shadow-lg rounded-lg p-6">
-                <h2 className="text-2xl font-semibold mb-4 text-blue-800">Pacotes Praias de pernambuco</h2>
-                <SwiperCards passeios={praiasPernambuco} />
+        {/* Pacotes - Praias do Rio Grande do Norte */}
+        <section className="w-full flex flex-col items-center p-4 mt-8">
+            <div className="w-full flex flex-col items-center bg-white shadow-lg rounded-lg p-6">
+            <h2 className="text-2xl font-semibold text-blue-800">Pacotes - Praias do Rio Grande do Norte</h2>
+            <p className="text-gray-600 text-lg text-center mt-2">
+                Descubra as incríveis dunas e praias de Natal e do litoral do Rio Grande do Norte.
+            </p>
+            <SwiperCards passeios={praiasRN} />
             </div>
-          </div>
-      </div>
+        </section>
+
+        {/* Pacotes - Praias de Pernambuco */}
+        <section className="w-full flex flex-col items-center p-4 mt-8">
+            <div className="w-full flex flex-col items-center bg-white shadow-lg rounded-lg p-6">
+            <h2 className="text-2xl font-semibold text-blue-800">Pacotes - Praias de Pernambuco</h2>
+            <p className="text-gray-600 text-lg text-center mt-2">
+                Visite Recife, Porto de Galinhas e outras maravilhas do litoral pernambucano.
+            </p>
+            <SwiperCards passeios={praiasPernambuco} />
+            </div>
+        </section>
+
+        </div>
     );
   }
