@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Sobre() {
     return (
-      <div className="flex flex-col md:flex-row items-center justify-center min-h-screen p-8 bg-gray-100">
+      <div className="flex flex-col md:flex-row items-center justify-center min-h-screen p-8 bg-gradient-to-b from-blue-50 to-blue-100">
 
         <div className="flex flex-col md:flex-row items-center justify-between gap-12 p-8 max-w-5xl bg-white shadow-lg rounded-xl">
           {/* Texto */}
