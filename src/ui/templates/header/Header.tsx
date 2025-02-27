@@ -13,7 +13,7 @@ export default function Header() {
 
     return (
         <>
-            <header className="bg-contentBackGroundBlue w-full flex items-center justify-between px-6 py-4 border-b border-yellow-400 shadow-lg">
+            <header className="bg-contentBackGroundBlue w-full flex items-center justify-between px-6 py-4">
                 {/* Título (Esquerda) */}
                 <Link href="/">
                     <h1 className="text-white font-extrabold text-3xl tracking-wide cursor-pointer">

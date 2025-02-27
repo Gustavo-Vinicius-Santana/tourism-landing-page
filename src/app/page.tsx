@@ -3,10 +3,10 @@ import SwiperCardPromo from "@/ui/components/swiperCardsPromo/swiperCardPromo";
 
 export default function Home() {
   return (
-    <div className="bg-gradient-to-b from-blue-50 to-blue-100 text-textDarkBlue-100 flex flex-col items-center pt-6">
+    <div className="bg-gradient-to-b from-blue-50 to-blue-100 text-textDarkBlue-100 flex flex-col items-center">
 
       {/* Carrousel principal*/}
-      <div className="w-full px-4">
+      <div className="w-full">
         <Carrousel />
       </div>
 
